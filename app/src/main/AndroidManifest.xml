@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DisplayMessageActivity"
+            android:name=".NewAccountCreation"
             android:parentActivityName=".MainActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
@@ -26,7 +26,7 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name=".NewAccountCreation"
+            android:name=".HomePageActivity"
             android:parentActivityName=".MainActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
