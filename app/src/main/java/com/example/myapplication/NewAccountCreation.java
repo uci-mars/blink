@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -21,6 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class NewAccountCreation extends AppCompatActivity implements View.OnClickListener {
 
     EditText editTextEmailID, editTextPassID, editTextName, editTextPhone;
+
     private FirebaseAuth mAuth;
     private DatabaseReference databaseReference;
 
@@ -33,7 +35,6 @@ public class NewAccountCreation extends AppCompatActivity implements View.OnClic
         editTextPassID = (EditText) findViewById(R.id.passID);
         editTextName = (EditText) findViewById(R.id.nameText);
         editTextPhone = (EditText) findViewById(R.id.phoneText);
-
 
         databaseReference = FirebaseDatabase.getInstance().getReference("user");
         mAuth = FirebaseAuth.getInstance();
@@ -78,11 +79,13 @@ public class NewAccountCreation extends AppCompatActivity implements View.OnClic
                     Toast.makeText(getApplicationContext(), "User Registered!", Toast.LENGTH_SHORT).show();
 
                     String id = databaseReference.push().getKey();
-                    UserInformation userInfo = new UserInformation(name, id, phone);
+                    UserInformation userInfo = new UserInformation(name, id, phone, email);
 
                     mAuth.signInWithEmailAndPassword(email, password);
                     FirebaseUser user = mAuth.getCurrentUser();
                     databaseReference.child(user.getUid()).setValue(userInfo);
+
+//                    databaseReference.child(id).setValue(userInfo);
 
                     startActivity(new Intent(NewAccountCreation.this, HomePageActivity.class));
                 }

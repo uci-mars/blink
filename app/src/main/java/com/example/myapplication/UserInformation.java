@@ -5,13 +5,15 @@ public class UserInformation {
     public String userName;
     public String userID;
     public String phone;
+    public String email;
 
     public UserInformation() {}
 
-    public UserInformation(String userName, String userID, String phone) {
+    public UserInformation(String userName, String userID, String phone, String email) {
         this.userName = userName;
         this.userID = userID;
         this.phone = phone;
+        this.email = email;
     }
 
     public String getUserName() {
@@ -36,5 +38,13 @@ public class UserInformation {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

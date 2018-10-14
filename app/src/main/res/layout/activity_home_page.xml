@@ -41,12 +41,24 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
+        android:id="@+id/gotoProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="240dp"
+        android:layout_marginRight="240dp"
+        android:onClick="onClick"
+        android:text="@string/gotoProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/gotoUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
         android:onClick="onClick"
         android:text="@string/gotoUpdate"
         app:layout_constraintEnd_toEndOf="parent"

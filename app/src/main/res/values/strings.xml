@@ -9,5 +9,6 @@
     <string name="enter_name">Name</string>
     <string name="ent_Image">Upload Image</string>
     <string name="gotoUpdate">Update Picture</string>
+    <string name="gotoProfile">View Profile</string>
     <string name="confImg">Confirm Image</string>
 </resources>

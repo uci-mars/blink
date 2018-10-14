@@ -41,6 +41,7 @@
             android:name=".SendNfcIntent"
             android:label="@string/title_activity_send_nfc_intent"
             android:theme="@style/AppTheme.NoActionBar" />
+<<<<<<< HEAD
         <activity android:name=".UpdateProfile"></activity>
 
         <activity android:name=".activities.MainActivity"
@@ -56,6 +57,8 @@
             android:resource="@array/preloaded_fonts" />
 
 
+=======
+>>>>>>> 4b9d4ffdd8413a27256fdb32d2045f773095c172
     </application>
 
 </manifest>
