@@ -3,3 +3,8 @@
 >We have combined NFC technology with Google's Firebase database to create a speedy business networking platform ideal
 >for events like career fairs, Hackathons, and random chance meetings. Don't have a resume or business card on you? No worries,
 >simply tap your phone and send your online profile.
+
+##Screenshot from Android App.
+![Login Screen](https://github.com/mi-chellenguyen/blink/blob/master/screenshots/screenshot%20(1).jpg)
+![Sign-Up Screen](https://github.com/mi-chellenguyen/blink/blob/master/screenshots/screenshot%20(2).jpg)
+![Main Page](https://github.com/mi-chellenguyen/blink/blob/master/screenshots/screenshot%20(3).jpg)
