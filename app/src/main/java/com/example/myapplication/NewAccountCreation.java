@@ -78,11 +78,13 @@ public class NewAccountCreation extends AppCompatActivity implements View.OnClic
                     Toast.makeText(getApplicationContext(), "User Registered!", Toast.LENGTH_SHORT).show();
 
                     String id = databaseReference.push().getKey();
-                    UserInformation userInfo = new UserInformation(name, id, phone);
+                    UserInformation userInfo = new UserInformation(name, id, phone, email);
 
                     mAuth.signInWithEmailAndPassword(email, password);
                     FirebaseUser user = mAuth.getCurrentUser();
                     databaseReference.child(user.getUid()).setValue(userInfo);
+
+//                    databaseReference.child(id).setValue(userInfo);
 
                     startActivity(new Intent(NewAccountCreation.this, HomePageActivity.class));
                 }
