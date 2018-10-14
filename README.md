@@ -5,6 +5,4 @@
 >simply tap your phone and send your online profile.
 
 ##Screenshot from Android App.
-![Login Screen](https://github.com/mi-chellenguyen/blink/blob/master/screenshots/screenshot%20(1).jpg)
-![Sign-Up Screen](https://github.com/mi-chellenguyen/blink/blob/master/screenshots/screenshot%20(2).jpg)
-![Main Page](https://github.com/mi-chellenguyen/blink/blob/master/screenshots/screenshot%20(3).jpg)
+![Screenshots](https://github.com/mi-chellenguyen/blink/blob/master/screenshots/screenshots.jpg)
