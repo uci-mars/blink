@@ -1,8 +1,8 @@
 package com.example.myapplication;
 
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
@@ -55,6 +55,8 @@ public class UserProfilePage extends AppCompatActivity {
         profilePicture = (ImageView) findViewById(R.id.imageViewPicture);
 
 
+
+
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -69,7 +71,7 @@ public class UserProfilePage extends AppCompatActivity {
     }
 
     private void showData(DataSnapshot dataSnapshot) {
-        for(DataSnapshot ds : dataSnapshot.getChildren()) {
+        for (DataSnapshot ds : dataSnapshot.getChildren()) {
             UserInformation uInfo = new UserInformation();
             uInfo.setUserName(ds.child(userID).child("userName").getValue(String.class));
             uInfo.setPhone(ds.child(userID).child("phone").getValue(String.class));
@@ -82,10 +84,11 @@ public class UserProfilePage extends AppCompatActivity {
             array.add(uInfo.getPhone());
             array.add(uInfo.getEmail());
 
-            ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,array);
+            ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, array);
             mListView.setAdapter(adapter);
             textViewName.setText(uInfo.getUserName());
 
         }
     }
+
 }
