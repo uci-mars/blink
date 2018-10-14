@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class HomePageActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button gotoUpdate, gotoProfile;
+    Button gotoUpdate, gotoProfile, gotoNfc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,7 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_home_page);
         findViewById(R.id.gotoUpdate).setOnClickListener(this);
         findViewById(R.id.gotoProfile).setOnClickListener(this);
+        findViewById(R.id.gotoNfc).setOnClickListener(this);
 
 //        // Get the Intent that started this activity and extract the string
 //        Intent intent = getIntent();
@@ -39,6 +40,9 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.gotoProfile:
                 startActivity(new Intent(this, UserProfilePage.class));
+                break;
+            case R.id.gotoNfc:
+                startActivity(new Intent(this, SendNfcIntent.class));
                 break;
         }
     }
