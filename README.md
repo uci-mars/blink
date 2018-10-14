@@ -8,7 +8,7 @@
 ![Screenshots](https://github.com/mi-chellenguyen/blink/blob/master/app/src/main/res/drawable/screenshots.png)
 
 ## Inspiration
-Having to deal with overstuffed wallets filled with business cards from networking events and lost connections due to misplaced contact information is extremely frustrating. As we are living in the digital age, we began to shift into a paperless society. Blink allows us network easily by seemlessly share and save contact information using NFC techology, so you won't have to hold on to those easy-to-lose business cards again.
+Having to deal with overstuffed wallets filled with business cards from networking events and losing connections due to misplaced contact information is extremely frustrating. As we are living in the digital age, we began to shift into a paperless society. Blink allows us network easily by seemlessly share and save contact information using NFC techology, so you won't have to hold on to those easy-to-lose business cards again.
 
 ## What It Does
 Blink allows users to sign up and create a profile to share with other users via NFC. They can also receive "cards" from our users and it will be automatically stored on the cloud.
