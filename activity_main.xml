@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
+
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/userID"
+
+        android:layout_width="260dp"
+        android:layout_height="54dp"
+
+        android:backgroundTint="#FFFFFF"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/enter_email"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="15sp"
+        app:fontFamily="@font/gibson_regular"
+        app:layout_constraintBottom_toTopOf="@+id/passwordID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <Button
+        android:id="@+id/loginButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="269dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/mybutton"
+        android:onClick="onClick"
+        android:text="@string/button_login"
+        android:textAllCaps="true"
+        android:textColor="#5887F9"
+        android:textSize="10sp"
+        app:fontFamily="@font/gibson_bold"
+        app:layout_constraintBottom_toTopOf="@+id/loginButton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordID" />
+
+    <Button
+        android:id="@+id/loginButtonGoogle"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="269dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/mybuttongoogle"
+        android:onClick="onClick"
+        android:text="Sign In Via Google"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:fontFamily="@font/gibson_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+
+    <EditText
+        android:id="@+id/passwordID"
+
+        android:layout_width="260dp"
+        android:layout_height="54dp"
+
+        android:layout_marginBottom="12dp"
+        android:autofillHints=""
+        android:backgroundTint="#FFFFFF"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/enter_password"
+        android:inputType="textPassword"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="15sp"
+        app:fontFamily="@font/gibson_regular"
+        app:layout_constraintBottom_toTopOf="@+id/loginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userID" />
+
+    <TextView
+        android:id="@+id/textViewSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="163dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="27dp"
+        android:text="@string/create_account"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:visibility="visible"
+        app:fontFamily="@font/gibson_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginButtonGoogle" />
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="115dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="139dp"
+        android:layout_marginLeft="139dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="139dp"
+        android:layout_marginRight="139dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/userID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/whiteminilogo" />
+
+</android.support.constraint.ConstraintLayout>

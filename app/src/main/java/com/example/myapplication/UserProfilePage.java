@@ -46,6 +46,8 @@ public class UserProfilePage extends AppCompatActivity {
         FirebaseUser user = mAuth.getCurrentUser();
         userID = user.getUid();
 
+        System.out.println("USER ID: " + userID);
+
         profilePicture = (ImageView) findViewById(R.id.imageViewPicture);
 
 
@@ -65,10 +67,13 @@ public class UserProfilePage extends AppCompatActivity {
     private void showData(DataSnapshot dataSnapshot) {
         for(DataSnapshot ds : dataSnapshot.getChildren()) {
             UserInformation uInfo = new UserInformation();
-            uInfo.setUserName(ds.child(userID).getValue(UserInformation.class).getUserName());
-            uInfo.setPhone(ds.child(userID).getValue(UserInformation.class).getPhone());
-            uInfo.setEmail(ds.child(userID).getValue(UserInformation.class).getEmail());
-
+            uInfo.setUserName(ds.child(userID).child("userName").getValue(String.class));
+            uInfo.setPhone(ds.child(userID).child("phone").getValue(String.class));
+            uInfo.setEmail(ds.child(userID).child("email").getValue(String.class));
+//            uInfo.setUserName(ds.child(userID).getValue(UserInformation.class).getUserName());
+//            uInfo.setPhone(ds.child(userID).getValue(UserInformation.class).getPhone());
+//            uInfo.setEmail(ds.child(userID).getValue(UserInformation.class).getEmail());
+//
             ArrayList<String> array = new ArrayList<>();
             array.add(uInfo.getPhone());
             array.add(uInfo.getEmail());
