@@ -3,6 +3,8 @@
     package="com.example.myapplication">
 
     <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -39,7 +41,8 @@
         <activity
             android:name=".SendNfcIntent"
             android:label="@string/title_activity_send_nfc_intent"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".UpdateProfile"></activity>
     </application>
 
 </manifest>
