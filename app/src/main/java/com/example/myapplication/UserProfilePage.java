@@ -27,6 +27,7 @@ public class UserProfilePage extends AppCompatActivity {
     private String userID;
     private TextView textViewName;
     private ListView mListView;
+    //public DynamicLink profLink;
 
 
     ImageView profilePicture;
