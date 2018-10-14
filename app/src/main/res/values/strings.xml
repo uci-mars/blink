@@ -8,6 +8,6 @@
     <string name="title_activity_send_nfc_intent">SendNfcIntent</string>
     <string name="enter_name">Name</string>
     <string name="ent_Image">Upload Image</string>
-    <string name="gotoUpdate">Update Profile</string>
+    <string name="gotoUpdate">Update Picture</string>
     <string name="confImg">Confirm Image</string>
 </resources>
