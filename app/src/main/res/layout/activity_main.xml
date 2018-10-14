@@ -4,98 +4,129 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    
     tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/userID"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginTop="192dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginRight="7dp"
+
+        android:layout_width="260dp"
+        android:layout_height="54dp"
+
+        android:backgroundTint="#FFFFFF"
+        android:cursorVisible="false"
         android:ems="10"
+        android:gravity="center"
         android:hint="@string/enter_email"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="15sp"
+        app:fontFamily="@font/gibson_regular"
+        app:layout_constraintBottom_toTopOf="@+id/passwordID"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <Button
         android:id="@+id/loginButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="20dp"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="269dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/mybutton"
         android:onClick="onClick"
         android:text="@string/button_login"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAllCaps="true"
+        android:textColor="#5887F9"
+        android:textSize="10sp"
+        app:fontFamily="@font/gibson_bold"
+        app:layout_constraintBottom_toTopOf="@+id/loginButton2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.658" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordID" />
+
+    <Button
+        android:id="@+id/loginButtonGoogle"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="269dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/mybuttongoogle"
+        android:onClick="onClick"
+        android:text="Sign In Via Google"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:fontFamily="@font/gibson_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
 
     <EditText
         android:id="@+id/passwordID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
+
+        android:layout_width="260dp"
+        android:layout_height="54dp"
+
+        android:layout_marginBottom="12dp"
+        android:autofillHints=""
+        android:backgroundTint="#FFFFFF"
+        android:cursorVisible="false"
         android:ems="10"
+        android:gravity="center"
         android:hint="@string/enter_password"
         android:inputType="textPassword"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="15sp"
+        app:fontFamily="@font/gibson_regular"
+        app:layout_constraintBottom_toTopOf="@+id/loginButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userID" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="209dp"
-        android:layout_height="141dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
 
     <TextView
         android:id="@+id/textViewSignUp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="19dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="163dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginBottom="27dp"
         android:text="@string/create_account"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
         android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
-
-    <TextView
-        android:id="@+id/textViewNFC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="121dp"
-        android:layout_marginLeft="121dp"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="120dp"
-        android:layout_marginRight="120dp"
-        android:layout_marginBottom="83dp"
-        android:text="Test NFC Functionaility"
+        app:fontFamily="@font/gibson_bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSignUp" />
+        app:layout_constraintTop_toBottomOf="@+id/loginButtonGoogle" />
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="115dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="139dp"
+        android:layout_marginLeft="139dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="139dp"
+        android:layout_marginRight="139dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/userID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/whiteminilogo" />
 
 </android.support.constraint.ConstraintLayout>
