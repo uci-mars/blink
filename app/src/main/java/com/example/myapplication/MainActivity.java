@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     public static final String EXTRA_MESSAGE = "com.example.myapplication.MESSAGE";
     FirebaseAuth mAuth;
-    EditText editTextEmailID, editTextPassID;
+    EditText editTextEmailID, editTextPassID, textViewNFC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mAuth = FirebaseAuth.getInstance();
         findViewById(R.id.textViewSignUp).setOnClickListener(this);
         findViewById(R.id.loginButton).setOnClickListener(this);
+        findViewById(R.id.textViewNFC).setOnClickListener(this);
     }
 
     public void userLogin() {
@@ -73,6 +74,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.loginButton:
                 userLogin();
+                break;
+            case R.id.textViewNFC:
+                startActivity(new Intent(this, SendNfcIntent.class));
                 break;
         }
     }
