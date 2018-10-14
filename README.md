@@ -4,7 +4,7 @@
 >for events like career fairs, Hackathons, and random chance meetings. Don't have a resume or business card on you? No worries,
 >simply tap your phone and send your online profile.
 
-##Screenshot from Android App.
+## Screenshot from Android App.
 ![Screenshots](https://github.com/mi-chellenguyen/blink/blob/master/app/src/main/res/drawable/screenshots.png)
 
 ## Inspiration
