@@ -46,7 +46,7 @@ public class SendNfcIntent extends AppCompatActivity implements NfcAdapter.Creat
     @Override
     public NdefMessage createNdefMessage(NfcEvent nfcEvent) {
         return new NdefMessage(new NdefRecord[] {
-                NdefRecord.createUri("https://www.instagram.com/maralose")
+                NdefRecord.createUri("bl.ink/test123")
         });
     }
 
