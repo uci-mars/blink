@@ -43,7 +43,7 @@
         android:textColor="#5887F9"
         android:textSize="10sp"
         app:fontFamily="@font/gibson_bold"
-        app:layout_constraintBottom_toTopOf="@+id/loginButton2"
+        app:layout_constraintBottom_toTopOf="@+id/loginButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
