@@ -43,7 +43,8 @@
             android:label="@string/title_activity_send_nfc_intent"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".UpdateProfile" />
-        <activity android:name=".UserProfilePage"></activity>
+        <activity android:name=".UserProfilePage" />
+        <activity android:name=".AddCard"></activity>
     </application>
 
 </manifest>
