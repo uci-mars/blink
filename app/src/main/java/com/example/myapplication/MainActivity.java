@@ -1,11 +1,12 @@
 package com.example.myapplication;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -22,12 +23,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         mAuth = FirebaseAuth.getInstance();
         findViewById(R.id.textViewSignUp).setOnClickListener(this);
         findViewById(R.id.loginButton).setOnClickListener(this);
-        findViewById(R.id.textViewNFC).setOnClickListener(this);
+        findViewById(R.id.loginButtonGoogle).setOnClickListener(this);
     }
 
     public void userLogin() {
@@ -52,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             editTextEmailID.requestFocus();
         }
 
+
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -75,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.loginButton:
                 userLogin();
                 break;
-            case R.id.textViewNFC:
+            case R.id.loginButtonGoogle:
                 startActivity(new Intent(this, SendNfcIntent.class));
                 break;
         }

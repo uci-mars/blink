@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="enter_email">Email</string>
+    <string name="app_name">Blink</string>
+    <string name="enter_email">E-mail address</string>
     <string name="enter_password">Password</string>
-    <string name="button_login">Login</string>
+    <string name="button_login">SIGN IN</string>
     <string name="button_signup">Sign Up</string>
-    <string name="create_account"><u>New user? Create new account</u></string>
+    <string name="create_account"><u>Create new account</u></string>
     <string name="title_activity_send_nfc_intent">SendNfcIntent</string>
     <string name="enter_name">Name</string>
     <string name="ent_Image">Upload Image</string>
