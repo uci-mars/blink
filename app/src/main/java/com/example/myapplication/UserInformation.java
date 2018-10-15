@@ -13,7 +13,7 @@ public class UserInformation {
 
     public UserInformation(String userName, String phone, String email) {
         this.userName = userName;
-        this.userID = new UUID(10,10).fromString(userName);
+//        this.userID = new UUID(10,10).fromString(userName);
         this.phone = phone;
         this.email = email;
     }

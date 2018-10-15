@@ -85,9 +85,12 @@ public class NewAccountCreation extends AppCompatActivity implements View.OnClic
 
                     mAuth.signInWithEmailAndPassword(email, password);
                     FirebaseUser user = mAuth.getCurrentUser();
-                    databaseReference.child(user.getUid()).setValue(userInfo);
+//                    databaseReference.child(user.getUid()).setValue(userInfo);
 
 //                    databaseReference.child(id).setValue(userInfo);
+                    databaseReference.child(user.getUid()).child("userName").setValue(name);
+                    databaseReference.child(user.getUid()).child("phone").setValue(phone);
+                    databaseReference.child(user.getUid()).child("email").setValue(email);
 
                     startActivity(new Intent(NewAccountCreation.this, HomePageActivity.class));
                 }

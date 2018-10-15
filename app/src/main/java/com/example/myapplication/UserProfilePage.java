@@ -1,10 +1,13 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -19,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class UserProfilePage extends AppCompatActivity {
+public class UserProfilePage extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseDatabase mFirebaseDatabase;
     private FirebaseAuth mAuth;
@@ -28,8 +31,10 @@ public class UserProfilePage extends AppCompatActivity {
     private String userID;
     private TextView textViewName;
     private ListView mListView;
+    private ImageView imgView;
     //public DynamicLink profLink;
 
+    Button uploadPic;
 
     ImageView profilePicture;
 //    @tools:sample/avatars
@@ -43,6 +48,7 @@ public class UserProfilePage extends AppCompatActivity {
 
         mListView = (ListView) findViewById(R.id.listview);
         textViewName = (TextView) findViewById(R.id.textViewName);
+        findViewById(R.id.imageView6).setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
         mFirebaseDatabase = FirebaseDatabase.getInstance();
@@ -51,6 +57,7 @@ public class UserProfilePage extends AppCompatActivity {
         userID = user.getUid();
 
         System.out.println("USER ID: " + userID);
+        findViewById(R.id.uploadPic).setOnClickListener(this);
 
         profilePicture = (ImageView) findViewById(R.id.imageViewPicture);
 
@@ -71,7 +78,7 @@ public class UserProfilePage extends AppCompatActivity {
     }
 
     private void showData(DataSnapshot dataSnapshot) {
-        for (DataSnapshot ds : dataSnapshot.getChildren()) {
+        for(DataSnapshot ds : dataSnapshot.getChildren()) {
             UserInformation uInfo = new UserInformation();
             uInfo.setUserName(ds.child(userID).child("userName").getValue(String.class));
             uInfo.setPhone(ds.child(userID).child("phone").getValue(String.class));
@@ -84,11 +91,117 @@ public class UserProfilePage extends AppCompatActivity {
             array.add(uInfo.getPhone());
             array.add(uInfo.getEmail());
 
-            ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, array);
+            ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1, array);
             mListView.setAdapter(adapter);
             textViewName.setText(uInfo.getUserName());
 
         }
     }
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.uploadPic:
+                startActivity(new Intent(this, SendNfcIntent.class));
+            case R.id.imageView6:
+                startActivity(new Intent(this, HomePageActivity.class));
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
