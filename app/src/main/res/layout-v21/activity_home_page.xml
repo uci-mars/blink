@@ -35,7 +35,7 @@
         android:textSize="22sp"
         app:fontFamily="@font/roboto_bold"
         app:layout_constraintEnd_toStartOf="@+id/imageButton2"
-        app:layout_constraintStart_toEndOf="@+id/imageButton5"
+        app:layout_constraintStart_toEndOf="@+id/gotoNfc"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
@@ -52,7 +52,7 @@
         app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/gotoNfc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="27dp"
@@ -60,6 +60,7 @@
         android:layout_marginTop="29dp"
         android:background="#FFFFFF"
         android:contentDescription="TODO"
+        android:onClick="onClick"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/dots_vertical" />
